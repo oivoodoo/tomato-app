@@ -19,6 +19,9 @@
     <!-- client application files -->
     <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/routers/pomodoros.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/models/pomodoro.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/collections/pomodoros.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/pomodoros/list.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
 
@@ -28,9 +31,8 @@
         <h1>Pomodoros</h1>
       </div><!-- /header -->
 
-      <div data-role="content">
-        <ul data-role="listview" data-inset="true" data-filter="true">
-        </ul>
+      <div id='container' data-role="content">
+
       </div><!-- /content -->
 
     </div><!-- /page -->

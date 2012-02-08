@@ -1,10 +1,15 @@
 var App = {
   Routers: {},
   Models: {},
-  Views: {}
+  Collections: {},
+  Views: {
+    Pomodoros: {}
+  }
 };
 
 // initialize application settings and default router.
 App.init = function() {
-  var router = App.Routers.Pomodoros();
+  var router = new App.Routers.Pomodoros();
+
+  Backbone.history.start();
 };

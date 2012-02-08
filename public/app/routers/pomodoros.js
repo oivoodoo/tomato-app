@@ -1,10 +1,16 @@
-var App.Routers.Pomodoros = Backbone.Router.extend({
+App.Routers.Pomodoros = Backbone.Router.extend({
   routes: {
-    '/', 'index'
-  }
+    '': 'index'
+  },
 
   index: function() {
-    // Catch up all pomodoros from localStorage and then show in the listview.
-    //
+    var collection = new App.Collections.Pomodoros();
+    collection.fetch({
+      success: function() {
+        new App.Views.Pomodoros.List({
+          collection: collection
+        });
+      }
+    });
   }
 });
