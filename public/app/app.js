@@ -6,5 +6,5 @@ var App = {
 
 // initialize application settings and default router.
 App.init = function() {
-  var router = App.Routers.Pomidoros();
+  var router = App.Routers.Pomodoros();
 };

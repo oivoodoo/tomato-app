@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html manifest='/application.manifest'>
-	<head>
-	<title>Pomodoro</title>
+  <head>
+    <title>Pomodoro</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.0.1.min.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.0.1.min.css" />
 
-  <!-- jquery and jquery mobile -->
-	<script src="/javascripts/jquery-1.6.4.min.js"></script>
-	<script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
+    <!-- jquery and jquery mobile -->
+    <script src="/javascripts/jquery-1.6.4.min.js"></script>
+    <script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
 
-  <!-- backbone and dependecy libraries -->
-  <script src="/javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/backbone.localStorage-min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- backbone and dependecy libraries -->
+    <script src="/javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/backbone.localStorage-min.js" type="text/javascript" charset="utf-8"></script>
 
-  <!-- client application files -->
-  <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/app/routers/pomodoros.js" type="text/javascript" charset="utf-8"></script>
-</head>
-<body>
+    <!-- client application files -->
+    <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/routers/pomodoros.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
 
-  <div data-role="page">
+    <div data-role="page">
 
-    <div data-role="header">
-      <h1>Pomodoros</h1>
-    </div><!-- /header -->
+      <div data-role="header">
+        <h1>Pomodoros</h1>
+      </div><!-- /header -->
 
-    <div data-role="content">
-      <ul data-role="listview" data-inset="true" data-filter="true">
-      </ul>
-    </div><!-- /content -->
+      <div data-role="content">
+        <ul data-role="listview" data-inset="true" data-filter="true">
+        </ul>
+      </div><!-- /content -->
 
-  </div><!-- /page -->
+    </div><!-- /page -->
 
-  <script type="text/javascript" language="javascript" charset="utf-8">
-  //<![CDATA[
-  $(function() {
-    App.init();
-  });
-  //]]>
-  </script>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+      //<![CDATA[
+      $(function() {
+        App.init();
+      });
+      //]]>
+    </script>
 
-</body>
+  </body>
 </html>
