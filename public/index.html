@@ -17,21 +17,30 @@
   <script src="/javascripts/backbone-localStorage-min.js" type="text/javascript" charset="utf-8"></script>
 
   <!-- client application files -->
+  <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
-<div data-role="page">
+  <div data-role="page">
 
-	<div data-role="header">
-		<h1>Pomodoros</h1>
-	</div><!-- /header -->
+    <div data-role="header">
+      <h1>Pomodoros</h1>
+    </div><!-- /header -->
 
-	<div data-role="content">
-    <ul data-role="listview" data-inset="true" data-filter="true">
-    </ul>
-	</div><!-- /content -->
+    <div data-role="content">
+      <ul data-role="listview" data-inset="true" data-filter="true">
+      </ul>
+    </div><!-- /content -->
 
-</div><!-- /page -->
+  </div><!-- /page -->
+
+  <script type="text/javascript" language="javascript" charset="utf-8">
+  //<![CDATA[
+  $(function() {
+    App.init();
+  });
+  //]]>
+  </script>
 
 </body>
 </html>
