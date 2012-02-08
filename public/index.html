@@ -7,8 +7,16 @@
 
   <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.0.1.min.css" />
 
+  <!-- jquery and jquery mobile -->
 	<script src="/javascripts/jquery-1.6.4.min.js"></script>
 	<script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
+
+  <!-- backbone and dependecy libraries -->
+  <script src="/javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/backbone-localStorage-min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- client application files -->
 </head>
 <body>
 
@@ -19,6 +27,8 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
+    <ul data-role="listview" data-inset="true" data-filter="true">
+    </ul>
 	</div><!-- /content -->
 
 </div><!-- /page -->
