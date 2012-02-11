@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.0.1.min.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
 
     <!-- jquery and jquery mobile -->
     <script src="/javascripts/jquery-1.6.4.min.js"></script>
@@ -28,14 +29,14 @@
 
     <div id="new" data-role='page'>
       <div data-role='header'>
-        <a href="#home" data-icon='delete'>Cancel</a>
+        <a class='cancel' href="#" data-icon='delete'>Cancel</a>
         <h1>New Pomodoro</h1>
         <a class='create' href="#" data-icon='check'>Create</a>
       </div>
 
       <div data-role="content">
         <div data-role="fieldcontain">
-          <label for="name">Name:</label>
+          <label for="name"><em>* </em>Name:</label>
           <input type="text" name="name" id="name" value="" placeholder="Name"/>
         </div>
 

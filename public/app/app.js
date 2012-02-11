@@ -14,8 +14,8 @@ App.init = function() {
   Backbone.history.start();
 };
 
-$(document).bind("mobileinit", function() {
-  $.mobile.linkBindingEnabled = false;
-  $.mobile.pushStateEnabled = false;
-  $.mobile.hashListeningEnabled = false;
+$(function() {
+  $(window).resize( function(){
+      $('html').toggleClass('landscape, portrait');
+  });
 });
