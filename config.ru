@@ -7,7 +7,7 @@ end
 
 map '/application.manifest' do
   offline = Rack::Offline.new :cache => true, :root => "public" do
-    ["javascripts/*", "stylesheets/*", "images/*", "app/**/*"].each do |folder|
+    ["javascripts/*", "stylesheets/**/*", "images/*", "app/**/*"].each do |folder|
       Dir[File.join(settings.public_folder, folder)].each do |file|
         if File.file?(file)
           cache file.sub(File.join(settings.public_folder, ""), "")
