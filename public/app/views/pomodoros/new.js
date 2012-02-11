@@ -3,14 +3,14 @@ App.Views.Pomodoros.New = Backbone.View.extend({
     this.collection = options.collection;
 
     _.bindAll(this);
-    $('#new .create').bind('click', this.addItem);
+    $('#new .create').bind('click', this.create);
   },
 
   render: function() {
     $(this.el).html(this.template());
   },
 
-  addItem: function() {
+  create: function() {
     this.collection.create({
       name: $('#new #name').val(),
       decription: $('#new #description').val()

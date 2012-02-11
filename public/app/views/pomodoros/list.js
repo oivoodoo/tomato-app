@@ -1,10 +1,5 @@
 App.Views.Pomodoros.List = Backbone.View.extend({
-  tagName: 'ul',
-  attributes: {
-    'data-role': 'listview',
-    'data-inset': 'true',
-    'data-filter': 'true'
-  },
+  el: '#pomodoros-list',
 
   initialize: function(options) {
     this.collection = options.collection;

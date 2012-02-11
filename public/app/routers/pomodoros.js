@@ -13,6 +13,7 @@ App.Routers.Pomodoros = Backbone.Router.extend({
     });
 
     $('#container').html(view.render().el);
+    $('#container ul').listview();
   },
 
   'new': function() {
