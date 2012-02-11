@@ -10,6 +10,52 @@
     <!-- jquery and jquery mobile -->
     <script src="/javascripts/jquery-1.6.4.min.js"></script>
     <script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id='home' data-role="page">
+      <div data-role="header" data-position="inline">
+        <a href="#new" data-icon='plus'>New</a>
+        <h1>Pomodoros</h1>
+      </div><!-- /header -->
+
+      <div id='container' data-role="content">
+      </div><!-- /content -->
+    </div><!-- /page -->
+
+    <div id="new" data-role='page'>
+      <div data-role='header'>
+        <a href="#home" data-icon='delete'>Cancel</a>
+        <h1>New Pomodoro</h1>
+        <a class='create' href="#" data-icon='check'>Create</a>
+      </div>
+
+      <div data-role="content">
+        <div data-role="fieldcontain">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value="" placeholder="Name"/>
+        </div>
+
+        <div data-role="fieldcontain">
+          <label for="description">Description:</label>
+          <textarea name="description" id="description" placeholder="Description"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" language="javascript" charset="utf-8">
+      //<![CDATA[
+      $(function() {
+        App.init();
+      });
+      //]]>
+    </script>
+
+    <script type='text/template' id='pomodoro-item'>
+        <a href="#"><%= name %></a>
+    </script>
 
     <!-- backbone and dependecy libraries -->
     <script src="/javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
@@ -22,28 +68,7 @@
     <script src="/app/models/pomodoro.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/collections/pomodoros.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/views/pomodoros/list.js" type="text/javascript" charset="utf-8"></script>
-  </head>
-  <body>
-
-    <div data-role="page">
-
-      <div data-role="header">
-        <h1>Pomodoros</h1>
-      </div><!-- /header -->
-
-      <div id='container' data-role="content">
-
-      </div><!-- /content -->
-
-    </div><!-- /page -->
-
-    <script type="text/javascript" language="javascript" charset="utf-8">
-      //<![CDATA[
-      $(function() {
-        App.init();
-      });
-      //]]>
-    </script>
-
+    <script src="/app/views/pomodoros/item.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/pomodoros/new.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

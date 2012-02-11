@@ -1,16 +1,26 @@
 App.Routers.Pomodoros = Backbone.Router.extend({
   routes: {
-    '': 'index'
+    '':     'index',
+    'new':  'new'
   },
 
   index: function() {
     var collection = new App.Collections.Pomodoros();
-    collection.fetch({
-      success: function() {
-        new App.Views.Pomodoros.List({
-          collection: collection
-        });
-      }
+    collection.fetch();
+
+    var view = new App.Views.Pomodoros.List({
+      collection: collection
+    });
+
+    $('#container').html(view.render().el);
+  },
+
+  'new': function() {
+    var collection = new App.Collections.Pomodoros();
+    collection.fetch();
+
+    var view = new App.Views.Pomodoros.New({
+      collection: collection
     });
   }
 });

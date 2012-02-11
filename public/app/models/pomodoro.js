@@ -1,3 +1,1 @@
-App.Models.Pomodoro = Backbone.Model.extend({
-  localStorage: new Store('pomodoros')
-});
+App.Models.Pomodoro = Backbone.Model.extend({});
