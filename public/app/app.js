@@ -19,3 +19,4 @@ $(function() {
       $('html').toggleClass('landscape, portrait');
   });
 });
+

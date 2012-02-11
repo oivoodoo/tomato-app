@@ -29,7 +29,7 @@
 
     <div id="new" data-role='page'>
       <div data-role='header'>
-        <a class='cancel' href="#" data-icon='delete'>Cancel</a>
+        <a class='cancel' href="#">Cancel</a>
         <h1>New Pomodoro</h1>
         <a class='create' href="#" data-icon='check'>Create</a>
       </div>
@@ -47,6 +47,17 @@
       </div>
     </div>
 
+    <div id="show" data-role='page'>
+      <div data-role='header'>
+        <a class='cancel' href="#">Back</a>
+        <h1></h1>
+        <a class='remove' href="#" data-icon='delete'>Remove</a>
+      </div>
+
+      <div data-role="content">
+      </div>
+    </div>
+
     <script type="text/javascript" language="javascript" charset="utf-8">
       //<![CDATA[
       $(function() {
@@ -56,7 +67,7 @@
     </script>
 
     <script type='text/template' id='pomodoro-item'>
-        <a href="#"><%= name %></a>
+      <a href="/<%= id %>"><%= name %></a>
     </script>
 
     <!-- backbone and dependecy libraries -->
