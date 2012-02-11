@@ -27,9 +27,9 @@ App.Views.Pomodoros.New = Backbone.View.extend({
       error: function(model, error) {
         $('#new #name').parent()
           .append($('<label for="name" generated="true" class="error">').html(error))
-          .delay(3000);//.fadeIn(400, function() {
-            // $('#new .error').remove();
-          // });
+          .delay(3000).fadeIn(400, function() {
+            $('#new .error').remove();
+          });
       }
     });
 
