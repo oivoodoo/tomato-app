@@ -1,8 +1,8 @@
 App.Routers.Pomodoros = Backbone.Router.extend({
   routes: {
-    '':         'index',
-    'new':      'new',
-    ':id':     'show'
+    '':             'index',
+    'new':          'new',
+    'show?id=:id':  'show'
   },
 
   index: function() {
@@ -28,12 +28,11 @@ App.Routers.Pomodoros = Backbone.Router.extend({
 
   show: function(id) {
     debugger;
+    // var pomodoro = new App.Models.Pomodoro({ id: id });
+    // pomodoro.fetch();
 
-    var pomodoro = new App.Models.Pomodoro({ id: id });
-    pomodoro.fetch();
-
-    var view = new App.Views.Pomodoros.Show({
-      model: pomodoro
-    });
+    // var view = new App.Views.Pomodoros.Show({
+    //   model: pomodoro
+    // });
   }
 });
