@@ -20,9 +20,6 @@ App.Views.Pomodoros.New = Backbone.View.extend({
     }, {
       success: function() {
         self.goHome();
-
-        // We should unbind all events and clean form.
-        self.leave();
       },
       error: function(model, error) {
         $('#new #name').parent()
@@ -39,7 +36,6 @@ App.Views.Pomodoros.New = Backbone.View.extend({
 
   cancel: function() {
     this.goHome();
-    this.leave();
   },
 
   leave: function() {
@@ -52,5 +48,7 @@ App.Views.Pomodoros.New = Backbone.View.extend({
   goHome: function() {
     var router = new App.Routers.Pomodoros();
     router.navigate('', true);
+
+    this.leave();
   }
 });

@@ -27,8 +27,10 @@ App.Routers.Pomodoros = Backbone.Router.extend({
   },
 
   show: function(id) {
-    var pomodoro = new App.Models.Pomodoro({ id: id });
-    pomodoro.fetch();
+    var collection = new App.Collections.Pomodoros();
+    collection.fetch();
+
+    var pomodoro = collection.get(id);
 
     var view = new App.Views.Pomodoros.Show({
       model: pomodoro
