@@ -36,6 +36,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   leave: function() {
     $('#show .cancel').unbind('click');
     $('#show .remove').unbind('click');
+    $('#show [data-role=footer] li').unbind('click');
   },
 
   goHome: function() {
