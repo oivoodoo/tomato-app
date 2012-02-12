@@ -30,7 +30,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   },
 
   start: function() {
-
+    $.mobile.changePage('#timer', 'pop', true, true);
   },
 
   leave: function() {
