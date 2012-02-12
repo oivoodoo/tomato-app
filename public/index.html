@@ -21,7 +21,7 @@
   <body>
 
     <div id='home' data-role="page">
-      <div data-role="header" data-position="inline">
+      <div data-role="header" data-position="inline" data-position="fixed">
         <a href="#new" data-icon='plus'>New</a>
         <h1>Pomodoros</h1>
       </div><!-- /header -->
@@ -31,7 +31,7 @@
     </div><!-- /page -->
 
     <div id="new" data-role='page'>
-      <div data-role='header'>
+      <div data-role='header' data-position="fixed">
         <a class='cancel' href="#">Cancel</a>
         <h1>New Pomodoro</h1>
         <a class='create' href="#" data-icon='check'>Create</a>
@@ -51,7 +51,7 @@
     </div>
 
     <div id="show" data-role='page'>
-      <div data-role='header'>
+      <div data-role='header' data-position="fixed">
         <a class='cancel' href="#home">Back</a>
         <h1>Start Pomodoro</h1>
         <a class='remove' href="#" data-icon='delete'>Remove</a>
