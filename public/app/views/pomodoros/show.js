@@ -9,6 +9,10 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     $('#show .remove').bind('click', this.remove);
     $('#show .cancel').bind('click', this.cancel);
     $('#show [data-role=footer] li').bind('click', this.start);
+    $('#timer .cancel').bind('click', function(event) {
+      event.preventDefault();
+      $('#timer').dialog('close');
+    });
   },
 
   render: function() {
@@ -37,6 +41,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     $('#show .cancel').unbind('click');
     $('#show .remove').unbind('click');
     $('#show [data-role=footer] li').unbind('click');
+    $('#timer .click').unbind('click');
   },
 
   goHome: function() {
