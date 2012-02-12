@@ -16,7 +16,7 @@ App.Views.Pomodoros.New = Backbone.View.extend({
 
     this.collection.create({
       name: $('#new #name').val(),
-      decription: $('#new #description').val()
+      description: $('#new #description').val()
     }, {
       success: function() {
         self.goHome();

@@ -7,7 +7,20 @@ App.Views.Pomodoros.List = Backbone.View.extend({
   },
 
   initialize: function(options) {
+    var self = this;
+
     this.collection = options.collection;
+
+    _.bindAll(this);
+    this.$('li a').live('click', function() {
+      self.leave();
+
+      var id = $(this).data('id');
+
+      // This fix problem with jquery data cache.
+      $('#show').data('url', '#show?id=' + id);
+      $.mobile.changePage('#show?id=' + id);
+    });
   },
 
   render: function() {
@@ -20,5 +33,9 @@ App.Views.Pomodoros.List = Backbone.View.extend({
     });
 
     return this;
+  },
+
+  leave: function() {
+    this.$('li a').unbind('click');
   }
 });

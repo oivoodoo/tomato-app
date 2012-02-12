@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/stylesheets/styles.css" />
 
     <!-- jquery and jquery mobile -->
-    <script src="/javascripts/jquery-1.6.4.min.js"></script>
-    <script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
+    <script src="/javascripts/jquery-1.7.1.js"></script>
+    <script src="/javascripts/jquery.mobile-1.0.1.js"></script>
   </head>
 
   <body>
@@ -65,7 +65,7 @@
     </script>
 
     <script type='text/template' id='pomodoro-item'>
-      <a href="#show?id=<%= id %>"><%= name %></a>
+      <a data-id='<%= id %>' href='javascript:void(0);'><%= name %></a>
     </script>
 
     <!-- backbone and dependecy libraries -->

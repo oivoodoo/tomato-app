@@ -13,6 +13,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   render: function() {
     $(this.el).empty();
     $(this.el).append($('<h3>').html(this.model.get('name')));
+    $(this.el).append($('<p>').html(this.model.get('description')));
 
     return this;
   },
