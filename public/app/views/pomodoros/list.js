@@ -1,5 +1,10 @@
 App.Views.Pomodoros.List = Backbone.View.extend({
-  el: '#pomodoros-list',
+  tagName: 'ul',
+  attributes: {
+    'data-role': 'listview',
+    'data-inset': 'true',
+    'data-filter': 'true'
+  },
 
   initialize: function(options) {
     this.collection = options.collection;
@@ -7,8 +12,6 @@ App.Views.Pomodoros.List = Backbone.View.extend({
 
   render: function() {
     var self = this;
-
-    $(this.el).empty();
 
     var views = [];
     this.collection.each(function(item) {

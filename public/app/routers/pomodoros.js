@@ -13,8 +13,8 @@ App.Routers.Pomodoros = Backbone.Router.extend({
       collection: collection
     });
 
-    $('#container').html(view.render().el);
-    $('#container ul').listview();
+    $('#home [data-role=content]').html(view.render().el);
+    $('#home [data-role=listview]').listview();
   },
 
   'new': function() {
@@ -35,5 +35,8 @@ App.Routers.Pomodoros = Backbone.Router.extend({
     var view = new App.Views.Pomodoros.Show({
       model: pomodoro
     });
+
+    $('#show [data-role=content]').html(view.render().el);
+    $('#show [data-role=collapsible]').collapsible();
   }
 });

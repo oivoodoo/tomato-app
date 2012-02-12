@@ -1,5 +1,6 @@
 App.Views.Pomodoros.Show = Backbone.View.extend({
-  el: $('#show div div'),
+  tagName: 'div',
+  attributes: { 'data-role': 'collapsible' },
 
   initialize: function(options) {
     this.collection = options.collection;
@@ -12,7 +13,6 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   render: function() {
     $(this.el).empty();
     $(this.el).append($('<h3>').html(this.model.get('name')));
-    $(this.el).collapsible();
 
     return this;
   },
