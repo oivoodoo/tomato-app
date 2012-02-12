@@ -8,6 +8,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     _.bindAll(this);
     $('#show .remove').bind('click', this.remove);
     $('#show .cancel').bind('click', this.cancel);
+    $('#show [data-role=footer] li').bind('click', this.start);
   },
 
   render: function() {
@@ -26,6 +27,10 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
 
   cancel: function() {
     this.goHome();
+  },
+
+  start: function() {
+
   },
 
   leave: function() {
