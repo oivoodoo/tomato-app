@@ -17,3 +17,7 @@ em {
 #timer .seconds, #timer .minutes {
   font-size: 30px;
 }
+
+.completed {
+  text-decoration: line-through;
+}

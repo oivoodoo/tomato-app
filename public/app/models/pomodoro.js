@@ -7,5 +7,9 @@ App.Models.Pomodoro = Backbone.Model.extend({
     if (_.isEmpty(attributes.name)) {
       return "This field is required.";
     }
+  },
+
+  isCompleted: function() {
+    return this.get('status') === 'completed';
   }
 });

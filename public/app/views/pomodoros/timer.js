@@ -15,7 +15,9 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
 
     this.$('.cancel').bind('click', function(event) {
       event.preventDefault();
+
       self.cleanupTimer.call(self);
+      self.leave();
       $('#timer').dialog('close');
     });
 
@@ -28,9 +30,19 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
       changeHash: false
     });
 
-    var minutes = parseInt(this.minutes, 10);
-    var seconds = 0;
+    var self = this;
 
+    this.startTimer(this.minutes, function() {
+      self.breakTime.call(self);
+    });
+
+    return this;
+  },
+
+  startTimer: function(minutes, action) {
+    var self = this;
+
+    var seconds = 0;
     this.timer = setInterval(function() {
       if (seconds % 60 === 0) {
         minutes -= 1;
@@ -38,16 +50,15 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
       }
       seconds -= 1;
 
-      if (minutes === 0) {
+      if (minutes === 0 && seconds === 0) {
         seconds = 0;
         self.cleanupTimer.call(self);
+        action.call(self);
       }
 
       self.$('.minutes').html(minutes);
       self.$('.seconds').html(seconds);
     }, 1000);
-
-    return this;
   },
 
   cleanupTimer: function() {
@@ -59,6 +70,17 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
       clearInterval(this.timer);
       this.timer = null;
     }
+  },
+
+  breakTime: function() {
+    var self = this;
+    $('#timer h1').text('Break Time');
+    this.startTimer(5, function() {
+      self.model.set({ status: 'completed' });
+      var router = new App.Routers.Pomodoros();
+      router.navigate('', true);
+      self.leave();
+    });
   },
 
   leave: function() {

@@ -4,6 +4,9 @@ App.Views.Pomodoros.Item = Backbone.View.extend({
 
   render: function() {
     $(this.el).html(this.template(this.model.toJSON()));
+    if (this.model.isCompleted()) {
+      $(this.el).addClass('completed');
+    }
 
     return this;
   }
