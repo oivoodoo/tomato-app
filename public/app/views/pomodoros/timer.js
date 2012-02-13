@@ -16,7 +16,7 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
     this.$('.cancel').bind('click', function(event) {
       event.preventDefault();
       self.cleanupTimer.call(self);
-      $(self.el).dialog('close');
+      $('#timer').dialog('close');
     });
 
     this.render();
@@ -31,7 +31,7 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
     var minutes = parseInt(this.minutes, 10);
     var seconds = 0;
 
-    self.timer = setInterval(function() {
+    this.timer = setInterval(function() {
       if (seconds % 60 === 0) {
         minutes -= 1;
         seconds = 60;
@@ -40,8 +40,7 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
 
       if (minutes === 0) {
         seconds = 0;
-        clearInterval(timer);
-        self.timer = null;
+        self.cleanupTimer.call(self);
       }
 
       self.$('.minutes').html(minutes);
@@ -58,6 +57,7 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
 
     if (this.timer) {
       clearInterval(this.timer);
+      this.timer = null;
     }
   },
 
