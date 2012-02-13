@@ -10,7 +10,6 @@ var App = {
 // initialize application settings and default router.
 App.init = function() {
   var router = new App.Routers.Pomodoros();
-
   Backbone.history.start();
 };
 

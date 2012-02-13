@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/stylesheets/styles.css" />
 
     <!-- jquery and jquery mobile -->
-    <script src="/javascripts/jquery-1.7.1.min.js"></script>
-    <script src="/javascripts/jquery.mobile-1.0.1.min.js"></script>
+    <script src="/javascripts/jquery-1.7.1.js"></script>
+    <script src="/javascripts/jquery.mobile-1.0.1.js"></script>
   </head>
 
   <body>
@@ -61,11 +61,11 @@
       </div>
 
       <div data-role="footer" data-position="fixed">
-        <h1>Start pomodoro</h1>
+        <h1>Start Pomodoro</h1>
         <div data-role="navbar">
           <ul>
-            <li><a href="#">25</a></li>
             <li><a href="#">15</a></li>
+            <li><a href="#">25</a></li>
             <li><a href="#">10</a></li>
           </ul>
         </div><!-- /navbar -->
@@ -78,11 +78,13 @@
       </div>
 
       <div data-role='content'>
-        <div>
-          <span class='minutes'>0</span>
-          <span>:</span>
-          <span class='seconds'>0</span>
-        </div>
+        <center>
+          <div>
+            <span class='minutes'>0</span>
+            <span>:</span>
+            <span class='seconds'>0</span>
+          </div>
+        </center>
         <a class='cancel' href="javascript:void(0);" data-role="button">Cancel</a>
       </div>
     </div>
@@ -101,7 +103,7 @@
 
     <!-- backbone and dependecy libraries -->
     <script src="/javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/backbone.js" type="text/javascript" charset="utf-8"></script>
     <script src="/javascripts/backbone.localStorage-min.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- client application files -->
@@ -113,5 +115,6 @@
     <script src="/app/views/pomodoros/item.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/views/pomodoros/new.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/views/pomodoros/show.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/pomodoros/timer.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

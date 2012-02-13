@@ -13,3 +13,7 @@ em {
   font-weight: bold;
   padding-right: .25em;
 }
+
+#timer .seconds, #timer .minutes {
+  font-size: 30px;
+}

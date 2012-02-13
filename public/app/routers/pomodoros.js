@@ -1,8 +1,9 @@
 App.Routers.Pomodoros = Backbone.Router.extend({
   routes: {
-    '':             'index',
-    'new':          'new',
-    'show?id=:id':  'show'
+    '':    'index',
+    'new': 'new',
+    'timer?id=:id&minutes=:minutes&ui-state=dialog': 'timer',
+    'show?id=:id': 'show'
   },
 
   index: function() {
@@ -38,5 +39,11 @@ App.Routers.Pomodoros = Backbone.Router.extend({
 
     $('#show [data-role=content]').html(view.render().el);
     $('#show [data-role=collapsible]').collapsible();
+  },
+
+  timer: function(id, minutes) {
+    var view = new App.Views.Pomodoros.Timer({
+      minutes: minutes
+    });
   }
 });
