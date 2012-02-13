@@ -3,13 +3,18 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   attributes: { 'data-role': 'collapsible' },
 
   initialize: function(options) {
+    var self = this;
+
     this.collection = options.collection;
 
     _.bindAll(this);
     $('#show .remove').bind('click', this.remove);
     $('#show .cancel').bind('click', this.cancel);
 
-    var self = this;
+    $('#timer').bind('pagehide', function() {
+      self.cleanupTimer.call(self);
+    });
+
     $('#show [data-role=footer] li').bind('click', function() {
       $.mobile.changePage('#timer', 'pop', true, true);
 
@@ -35,6 +40,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     });
     $('#timer .cancel').bind('click', function(event) {
       event.preventDefault();
+      self.cleanupTimer.call(self);
       $('#timer').dialog('close');
     });
   },
@@ -61,7 +67,11 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     $('#show .cancel').unbind('click');
     $('#show .remove').unbind('click');
     $('#show [data-role=footer] li').unbind('click');
-    $('#timer .click').unbind('click');
+    $('#timer .cancel').unbind('click');
+    $('#timer').unbind('pagehide');
+  },
+
+  cleanupTimer: function() {
     // timer preferences
     $('#timer .minutes').text(0);
     $('#timer .seconds').text(0);

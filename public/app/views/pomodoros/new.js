@@ -30,7 +30,6 @@ App.Views.Pomodoros.New = Backbone.View.extend({
       }
     });
 
-
     return false;
   },
 
