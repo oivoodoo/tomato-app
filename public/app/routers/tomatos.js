@@ -1,4 +1,4 @@
-App.Routers.Pomodoros = Backbone.Router.extend({
+App.Routers.Tomatos = Backbone.Router.extend({
   routes: {
     '':    'index',
     'new': 'new',
@@ -7,12 +7,12 @@ App.Routers.Pomodoros = Backbone.Router.extend({
   },
 
   initialize: function() {
-    this.collection = new App.Collections.Pomodoros();
+    this.collection = new App.Collections.Tomatos();
     this.collection.fetch();
   },
 
   index: function() {
-    var view = new App.Views.Pomodoros.List({
+    var view = new App.Views.Tomatos.List({
       collection: this.collection
     });
 
@@ -21,15 +21,15 @@ App.Routers.Pomodoros = Backbone.Router.extend({
   },
 
   'new': function() {
-    var view = new App.Views.Pomodoros.New({
+    var view = new App.Views.Tomatos.New({
       collection: this.collection
     });
   },
 
   show: function(id) {
-    var pomodoro = this.collection.get(id);
-    var view = new App.Views.Pomodoros.Show({
-      model: pomodoro
+    var tomato = this.collection.get(id);
+    var view = new App.Views.Tomatos.Show({
+      model: tomato
     });
 
     $('#show [data-role=content]').html(view.render().el);
@@ -37,9 +37,9 @@ App.Routers.Pomodoros = Backbone.Router.extend({
   },
 
   timer: function(id, minutes) {
-    var pomodoro = this.collection.get(id);
-    var view = new App.Views.Pomodoros.Timer({
-      model: pomodoro,
+    var tomato = this.collection.get(id);
+    var view = new App.Views.Tomatos.Timer({
+      model: tomato,
       minutes: minutes
     });
   }

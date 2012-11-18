@@ -1,4 +1,4 @@
-App.Views.Pomodoros.New = Backbone.View.extend({
+App.Views.Tomatos.New = Backbone.View.extend({
   initialize: function(options) {
     this.collection = options.collection;
 
@@ -45,7 +45,7 @@ App.Views.Pomodoros.New = Backbone.View.extend({
   },
 
   goHome: function() {
-    var router = new App.Routers.Pomodoros();
+    var router = new App.Routers.Tomatos();
     router.navigate('', true);
 
     this.leave();

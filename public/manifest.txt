@@ -1,7 +1,7 @@
 {
   "version": "1.31",
-  "name": "The Pomodoro Technique Timer",
-  "description": "The Pomodoro Technique is a way to get the most out of time management. Turn time into a valuable ally to accomplish what we want to do and chart continuous improvement in the way we do it.",
+  "name": "The Tomato Technique Timer",
+  "description": "Tomatos for you",
   "icons": {
     "16": "/images/icon_16.png",
     "48": "/images/icon_48.png",

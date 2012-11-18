@@ -1,4 +1,4 @@
-Pomodoro Timer
+Tomato Timer
 ===============
 
 About
@@ -10,5 +10,5 @@ connection.
 
 Home Page
 ---------
-http://pomodoro-app.heroku.com/
+http://tomato-app.heroku.com/
 

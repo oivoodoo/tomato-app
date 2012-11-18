@@ -1,4 +1,4 @@
-App.Models.Pomodoro = Backbone.Model.extend({
+App.Models.Tomato = Backbone.Model.extend({
   initialize: function() {
     this.localStorage = this.collection.localStorage;
   },

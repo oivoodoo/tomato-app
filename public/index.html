@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html manifest='/application.manifest'>
   <head>
-    <title>Pomodoro</title>
+    <title>Tomato</title>
 
     <meta name='author' content='Alexander Korsak <alex.korsak@gmail.com>' />
-    <meta name='description' content="The Pomodoro Technique is a way to get the most out of time management. Turn time into a valuable ally to accomplish what we want to do and chart continuous improvement in the way we do it. That's why I've created the pomodoro timer" />
-    <meta name='title' content='The Pomodoro Technique Timer' />
+    <meta name='description' content="Tomato timer" />
+    <meta name='title' content='The Tomato Timer' />
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -38,7 +38,7 @@
     <div id='home' data-role="page">
       <div data-role="header" data-position="inline" data-position="fixed">
         <a href="#new" data-icon='plus'>New</a>
-        <h1>Pomodoros</h1>
+        <h1>Tomatos</h1>
       </div><!-- /header -->
 
       <div data-role="content">
@@ -48,7 +48,7 @@
     <div id="new" data-role='page'>
       <div data-role='header' data-position="fixed">
         <a class='cancel' href="#">Cancel</a>
-        <h1>New Pomodoro</h1>
+        <h1>New Tomato</h1>
         <a class='create' href="#" data-icon='check'>Create</a>
       </div>
 
@@ -76,7 +76,7 @@
       </div>
 
       <div data-role="footer" data-position="fixed">
-        <h1>Start Pomodoro</h1>
+        <h1>Start Tomato</h1>
         <div data-role="navbar">
           <ul>
             <li><a href="#">15</a></li>
@@ -112,7 +112,7 @@
       //]]>
     </script>
 
-    <script type='text/template' id='pomodoro-item'>
+    <script type='text/template' id='tomato-item'>
       <a data-id='<%= id %>' href='javascript:void(0);'><%= name %></a>
     </script>
 
@@ -123,14 +123,14 @@
 
     <!-- client application files -->
     <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/routers/pomodoros.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/models/pomodoro.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/collections/pomodoros.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/views/pomodoros/list.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/views/pomodoros/item.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/views/pomodoros/new.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/views/pomodoros/show.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/views/pomodoros/timer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/routers/tomatos.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/models/tomato.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/collections/tomatos.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/tomatos/list.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/tomatos/item.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/tomatos/new.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/tomatos/show.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/views/tomatos/timer.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
 

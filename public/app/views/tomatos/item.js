@@ -1,5 +1,5 @@
-App.Views.Pomodoros.Item = Backbone.View.extend({
-  template: _.template($('#pomodoro-item').html()),
+App.Views.Tomatos.Item = Backbone.View.extend({
+  template: _.template($('#tomato-item').html()),
   tagName: 'li',
 
   render: function() {

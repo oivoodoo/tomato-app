@@ -3,13 +3,13 @@ var App = {
   Models: {},
   Collections: {},
   Views: {
-    Pomodoros: {}
+    Tomatos: {}
   }
 };
 
 // initialize application settings and default router.
 App.init = function() {
-  var router = new App.Routers.Pomodoros();
+  var router = new App.Routers.Tomatos();
   Backbone.history.start();
 };
 

@@ -1,4 +1,4 @@
-App.Views.Pomodoros.Timer = Backbone.View.extend({
+App.Views.Tomatos.Timer = Backbone.View.extend({
   el: $('#timer'),
 
   initialize: function(options) {
@@ -81,7 +81,7 @@ App.Views.Pomodoros.Timer = Backbone.View.extend({
     $('#timer h1').text('Break Time');
     this.startTimer(5, function() {
       self.model.set({ status: 'completed' });
-      var router = new App.Routers.Pomodoros();
+      var router = new App.Routers.Tomatos();
       router.navigate('', true);
       self.leave();
     });

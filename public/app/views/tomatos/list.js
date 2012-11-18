@@ -1,4 +1,4 @@
-App.Views.Pomodoros.List = Backbone.View.extend({
+App.Views.Tomatos.List = Backbone.View.extend({
   tagName: 'ul',
   attributes: {
     'data-role': 'listview',
@@ -28,7 +28,7 @@ App.Views.Pomodoros.List = Backbone.View.extend({
 
     var views = [];
     this.collection.each(function(item) {
-      var view = new App.Views.Pomodoros.Item({ model: item });
+      var view = new App.Views.Tomatos.Item({ model: item });
       $(self.el).append(view.render().el);
     });
 

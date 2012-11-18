@@ -1,4 +1,4 @@
-App.Views.Pomodoros.Show = Backbone.View.extend({
+App.Views.Tomatos.Show = Backbone.View.extend({
   tagName: 'div',
   attributes: { 'data-role': 'collapsible' },
 
@@ -13,7 +13,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
     $('#show [data-role=footer] li').bind('click', function() {
       var minutes = $(this).find('a').text();
 
-      var router = new App.Routers.Pomodoros();
+      var router = new App.Routers.Tomatos();
       router.navigate('timer?id=' + self.model.id +
                       '&minutes=' + minutes +
                       '&ui-state=dialog', true);
@@ -44,7 +44,7 @@ App.Views.Pomodoros.Show = Backbone.View.extend({
   },
 
   goHome: function() {
-    var router = new App.Routers.Pomodoros();
+    var router = new App.Routers.Tomatos();
     router.navigate('', true);
     this.leave();
   }
